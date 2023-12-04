@@ -12,9 +12,9 @@ template <typename T>
 T half(T val) {
     T res;
     res = val / 2;
-    if (*typeid(val).name() == 'i') {//as we need to round off the value, when val is of int type
-        if (res * 2 != val) {//since we know for odd integer value divisiom with 2 give .5 less, and we need to round up 0.5 or higher values  
-            res++;//so we are increasing the number;
+    if (*typeid(val).name() == 'i') {
+        if (res * 2 != val) {
+            res++;
         }
     }
     return res;//returning the half value
